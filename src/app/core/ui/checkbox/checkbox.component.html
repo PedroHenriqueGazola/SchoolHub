@@ -1,0 +1,14 @@
+<div class="sh-checkbox flex items-center gap-2">
+  <input
+    [id]="id"
+    type="checkbox"
+    class="h-5 w-5 cursor-pointer rounded text-primary" />
+
+  @if (label) {
+    <label
+      [for]="id"
+      class="text-text-default cursor-pointer text-sm font-medium"
+      >{{ label }}</label
+    >
+  }
+</div>

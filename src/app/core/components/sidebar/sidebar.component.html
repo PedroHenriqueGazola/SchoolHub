@@ -1,0 +1,37 @@
+<div class="bg-primary flex h-full w-60 flex-col gap-12">
+  <div class="flex w-full items-center justify-center gap-2 p-4">
+    <img src="logo.png" alt="logo" class="h-10 w-10 rounded-full" />
+
+    <span class="font-['Poppins', sans-serif] text-xl font-medium text-white"
+      >SchoolHub</span
+    >
+  </div>
+
+  <div class="flex flex-col gap-3">
+    @for (item of items; track $index) {
+      <div class="relative px-5">
+        <div
+          class="bg-tertiary absolute -left-[105px] -top-6 h-[100px] w-[100px] rotate-45 rounded-lg"
+          [ngClass]="{
+            'bg-tertiary': selectedItem()?.title === item.title,
+            'bg-transparent': selectedItem()?.title !== item.title,
+          }"></div>
+
+        <div
+          (click)="goTo(item)"
+          class="hover: flex cursor-pointer items-center gap-4 rounded-lg px-2 py-3 transition-all duration-300 ease-in-out"
+          [ngClass]="{
+            'bg-tertiary': selectedItem()?.title === item.title,
+            'hover:bg-tertiary': selectedItem()?.title !== item.title,
+            'text-secondary': selectedItem()?.title === item.title,
+            'text-white': selectedItem()?.title !== item.title,
+            'hover:text-secondary': selectedItem()?.title !== item.title,
+          }">
+          <mat-icon>{{ item.icon }}</mat-icon>
+
+          <span class="font-medium">{{ item.title }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

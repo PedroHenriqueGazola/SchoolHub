@@ -1,0 +1,1 @@
+export const AUTHENTICATED_USER_KEY = 'SchoolhubStorage.AUTHENTICATED_USER';

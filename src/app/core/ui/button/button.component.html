@@ -1,0 +1,20 @@
+<button
+  type="button"
+  [disabled]="disabled"
+  [class]="
+    button({
+      theme,
+      layout,
+      size,
+      shape,
+      disabled,
+    })
+  ">
+  @if (layout !== 'icon') {
+    <span>{{ label }}</span>
+  }
+
+  @if (layout !== 'default') {
+    <mat-icon>{{ icon }}</mat-icon>
+  }
+</button>

@@ -1,0 +1,38 @@
+<div class="flex h-full w-full">
+  <div class="flex w-full items-center justify-center">
+    <img src="login.png" alt="login" class="h-4/5 w-4/5 object-contain" />
+  </div>
+
+  <div class="w-1 bg-background"></div>
+
+  <div class="flex w-full flex-col items-center justify-center gap-12">
+    <img src="logo.png" alt="logo" class="h-40 w-40" />
+
+    <span class="text-2xl font-bold">Bem-vindo ao SchoolHub</span>
+
+    <form [formGroup]="loginForm" class="flex w-96 flex-col gap-4">
+      <sh-input label="E-mail">
+        <input type="email" formControlName="email" />
+      </sh-input>
+
+      <sh-input label="Senha">
+        <input type="password" formControlName="password" />
+      </sh-input>
+
+      <sh-checkbox
+        label="Lembrar-me"
+        [checked]="loginForm.get('rememberMe')?.value"
+        (change)="toggleRememberMe($event)"></sh-checkbox>
+
+      <sh-button
+        label="Entrar"
+        (click)="signIn()"
+        size="full"
+        icon="home"
+        [disabled]="loginForm.invalid || loginForm.pristine"
+        layout="suffix"></sh-button>
+    </form>
+  </div>
+
+  <div></div>
+</div>
