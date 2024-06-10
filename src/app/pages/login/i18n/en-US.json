@@ -1,0 +1,9 @@
+{
+  "LOGIN": {
+    "WELCOME": "Welcome to SchoolHub",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "REMEMBER_ME": "Remember me",
+    "SIGN_IN": "Sign in"
+  }
+}

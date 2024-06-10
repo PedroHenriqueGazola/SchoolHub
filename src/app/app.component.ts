@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { BlankLayoutComponent } from './core/layout/blank/blank.component';
 import { MainLayoutComponent } from './core/layout/main/main.component';
 import type { PageLayout } from './core/layout/layout.interface';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import type { PageLayout } from './core/layout/layout.interface';
     CommonModule,
     BlankLayoutComponent,
     MainLayoutComponent,
+    TranslateModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

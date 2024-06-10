@@ -35,6 +35,7 @@
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
+            "allowedCommonJsDependencies": ["dayjs"],
             "ssr": {
               "entry": "server.ts"
             }

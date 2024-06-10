@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LoginPageRoutingModule } from './login-routing.module';
 import { ShUiModule } from '../../core/ui/ui.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { PipesModule } from '@pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -17,6 +19,8 @@ import { ShUiModule } from '../../core/ui/ui.module';
     FormsModule,
     LoginPageRoutingModule,
     ShUiModule,
+    TranslateModule,
+    PipesModule,
   ],
   providers: [LoginPageService],
   declarations: [LoginPageComponent],

@@ -5,6 +5,7 @@ import { ShRadioComponent } from './radio/radio.component';
 import { ShCheckboxComponent } from './checkbox/checkbox.component';
 import { ShButtonComponent } from './button/button.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,6 @@ import { MatIconModule } from '@angular/material/icon';
     ShCheckboxComponent,
     ShButtonComponent,
   ],
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, ReactiveFormsModule],
 })
 export class ShUiModule {}

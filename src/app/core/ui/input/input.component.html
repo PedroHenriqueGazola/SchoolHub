@@ -1,9 +1,24 @@
 <div class="sh-input flex flex-col items-start gap-2">
   @if (label) {
-    <label class="text-sm font-medium">{{ label }}</label>
+    <span class="text-sm font-medium">{{ label }}</span>
   }
 
-  <ng-content>
-    <input type="text" />
-  </ng-content>
+  <div class="relative w-full">
+    @if (icon) {
+      <mat-icon
+        class="absolute top-1/2 -translate-y-1/2 transform text-current"
+        [ngClass]="{
+          'left-2': layout === 'prefix',
+          'right-2': layout === 'suffix',
+        }"
+        >{{ icon }}</mat-icon
+      >
+    }
+
+    <input
+      [class]="input({ layout })"
+      [type]="type"
+      [formControl]="control"
+      [placeholder]="placeholder" />
+  </div>
 </div>
