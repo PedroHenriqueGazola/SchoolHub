@@ -1,4 +1,4 @@
-import {
+import type {
   ActivatedRouteSnapshot,
   ResolveFn,
   RouterStateSnapshot,
@@ -6,7 +6,7 @@ import {
 } from '@angular/router';
 import { PageLayoutService } from './core/layout/layout.service';
 import { inject } from '@angular/core';
-import { PageLayout } from './core/layout/layout.interface';
+import type { PageLayout } from './core/layout/layout.interface';
 import {
   authenticatedGuard,
   unauthenticatedGuard,
@@ -33,7 +33,7 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     resolve: {
-      layout: setLayout('default'),
+      layout: setLayout('main'),
     },
     title: 'Dashboard <> SchoolHub',
     canActivate: [authenticatedGuard],
@@ -45,7 +45,7 @@ export const routes: Routes = [
   {
     path: 'alunos',
     resolve: {
-      layout: setLayout('default'),
+      layout: setLayout('main'),
     },
     canActivate: [authenticatedGuard],
     loadChildren: () =>

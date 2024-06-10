@@ -1,1 +1,1 @@
-export type PageLayout = 'default' | 'blank';
+export type PageLayout = 'main' | 'blank';

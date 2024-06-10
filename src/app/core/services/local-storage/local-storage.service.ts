@@ -1,6 +1,5 @@
-import { Inject, Injectable, afterNextRender } from '@angular/core';
-import { LocalStorageOptions } from './local-storage.type';
-import { DOCUMENT } from '@angular/common';
+import { Injectable, afterNextRender } from '@angular/core';
+import type { LocalStorageOptions } from './local-storage.type';
 
 @Injectable({
   providedIn: 'root',

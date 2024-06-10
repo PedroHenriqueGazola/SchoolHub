@@ -1,5 +1,10 @@
-import { Component, Inject, signal } from '@angular/core';
-import { SidebarItem, SidebarItems } from './sidebar.type';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  signal,
+} from '@angular/core';
+import { type SidebarItem, SidebarItems } from './sidebar.type';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -11,6 +16,7 @@ import { DOCUMENT } from '@angular/common';
   imports: [MatIconModule, CommonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidebarComponent {
   public items = SidebarItems;

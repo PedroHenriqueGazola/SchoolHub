@@ -1,8 +1,22 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    "inlineSources": true,
+    "newLine": "lf",
+    "noEmitHelpers": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -14,7 +28,7 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
@@ -30,9 +44,7 @@
       "@pipes/*": ["./src/app/core/pipes/*"],
       "@interceptors/*": ["./src/app/core/interceptors/*"],
       "@components/*": ["./src/app/core/components/*"],
-      "@constants/*": ["./src/app/core/constants/*"],
       "@others/*": ["./src/app/core/others/*"],
-      "@validators/*": ["./src/app/core/*"]
     }
   },
   "angularCompilerOptions": {

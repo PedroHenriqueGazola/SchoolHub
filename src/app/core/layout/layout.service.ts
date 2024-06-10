@@ -1,6 +1,6 @@
-import { Injectable, signal } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { PageLayout } from './layout.interface';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import type { PageLayout } from './layout.interface';
 
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { tv } from 'tailwind-variants';
-import {
+import type {
   ShButtonLayout,
   ShButtonShape,
   ShButtonSize,
@@ -11,6 +11,7 @@ import {
   selector: 'sh-button',
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShButtonComponent {
   @Input() public label?: string;
@@ -22,7 +23,7 @@ export class ShButtonComponent {
   @Input() public shape: ShButtonShape = 'default';
 
   public button = tv({
-    base: 'flex items-center justify-center truncate font-medium transition-all duration-300 ease-in-out',
+    base: 'items-center justify-center flex truncate font-medium transition-all duration-300 ease-in-out',
     variants: {
       theme: {
         solid:

@@ -1,5 +1,5 @@
 import {
-  ApplicationConfig,
+  type ApplicationConfig,
   provideExperimentalZonelessChangeDetection,
   provideZoneChangeDetection,
 } from '@angular/core';
